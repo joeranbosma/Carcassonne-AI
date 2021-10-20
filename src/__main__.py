@@ -4,9 +4,8 @@ Runs the main code.
 """
 import argparse
 
-# from code.src import (
-#    dominating_set_snn,
-# )
+from src.create_tiles import create_meadow
+
 # from code.test.helper import create_manual_test_graph
 import networkx as nx
 import pickle
@@ -24,6 +23,8 @@ args = parser.parse_args()
 
 # Run main code
 print(f"Hello world")
+meadow = create_meadow()
+print(f"Done.")
 
 # Do something
 if args.infile:
