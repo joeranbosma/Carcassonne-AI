@@ -22,5 +22,12 @@ def create_meadow():
     meadow.add_edge(1, 4)
     return meadow
     
-    #road=nx.path_graph(4)
-    #city=nx.path_graph(4)
+def create_road():
+    road=nx.path_graph(4)
+    road.add_edge(0, 2)
+    return road
+    
+def create_city():
+    city=nx.path_graph(4)
+    city.add_edge(0, 2)
+    return city
