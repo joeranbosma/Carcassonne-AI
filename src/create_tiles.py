@@ -11,14 +11,6 @@ def add_two(self, x):
     return x + 2
 
 
-def create_tiles():
-    pass
-
-
-def create_tile():
-    pass
-
-
 def create_meadow():
     # Create graph for tile to represent meadow connections in tile.
     # Index 0 =top left half edge of tile, counts clockwise positive
@@ -101,7 +93,6 @@ def create_town():
     # plot the town graph
     plot_graph(town)
     return town
-
 
 def plot_graph(G):
 
