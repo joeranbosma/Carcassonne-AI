@@ -125,6 +125,33 @@ class TestMain(unittest.TestCase):
         self.assertFalse(road.has_edge(3, 2))
         self.assertFalse(road.has_edge(3, 3))
 
+    def test_example_town(self):
+        town = create_town()
+        expected_nr_of_nodes = 4
+        expected_nr_of_edges = 1
+        self.assertEqual(town.number_of_nodes(), expected_nr_of_nodes)
+        self.assertEqual(town.number_of_edges(), expected_nr_of_edges)
+
+        self.assertFalse(town.has_edge(0, 0))
+        self.assertFalse(town.has_edge(0, 1))
+        self.assertTrue(town.has_edge(0, 2))
+        self.assertFalse(town.has_edge(0, 3))
+
+        self.assertFalse(town.has_edge(1, 0))
+        self.assertFalse(town.has_edge(1, 1))
+        self.assertFalse(town.has_edge(1, 2))
+        self.assertFalse(town.has_edge(1, 3))
+
+        self.assertTrue(town.has_edge(2, 0))
+        self.assertFalse(town.has_edge(2, 1))
+        self.assertFalse(town.has_edge(2, 2))
+        self.assertFalse(town.has_edge(2, 3))
+
+        self.assertFalse(town.has_edge(3, 0))
+        self.assertFalse(town.has_edge(3, 1))
+        self.assertFalse(town.has_edge(3, 2))
+        self.assertFalse(town.has_edge(3, 3))
+
 
 if __name__ == "__main__":
     unittest.main()
